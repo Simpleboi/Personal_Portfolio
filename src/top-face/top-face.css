@@ -1,0 +1,12 @@
+
+
+
+
+.corner-a:hover {
+    background-color: red;
+    transform: scale(2);
+    transition: transform 0.3s ease;
+    background-image: url('/images/javascript.png');
+    background-position: center;
+    background-size: cover;
+}

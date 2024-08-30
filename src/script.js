@@ -1,9 +1,11 @@
-// Control the rotation of the cube
-document.querySelectorAll("nav a").forEach((link) => {
-  link.addEventListener("click", (event) => {
-    const cubeWrapper = document.querySelector(".cube-wrapper");
-    const cube = document.querySelector(".cube");
 
+// Cube elements
+const cubeWrapper = document.querySelector(".cube-wrapper");
+const cube = document.querySelector(".cube");
+
+// Control the rotation of the cube
+document.querySelectorAll("nav a").forEach((element) => {
+  element.addEventListener("click", (event) => {
     cubeWrapper.style.transform = "scale(1.5)";
     cube.style.transition = "transform 1s";
 
@@ -28,13 +30,24 @@ document.querySelectorAll("nav a").forEach((link) => {
         break;
     }
   });
-
-  // link.addEventListener("mouseleave", () => {
-  //   const cubeWrapper = document.querySelector(".cube-wrapper");
-  //   const cube = document.querySelector(".cube");
-
-  //   cubeWrapper.style.transform = "scale(1)";
-  //   cube.style.transform = "rotateX(-30deg) rotateY(45deg)";
-  // });
 });
 
+
+// To reset the cube back to scale
+const header_name = document.getElementById('header_name');
+
+header_name.addEventListener('click', () => {
+  cubeWrapper.style.transform = "scale(1)";
+  cube.style.transform = "rotateX(-30deg) rotateY(45deg)";
+})
+
+
+
+// Functionality for the Top Face
+const corner_a = document.getElementById('corner-a');
+
+const skills = document.getElementById('skills');
+skills.addEventListener('click', () => {
+  corner_a.style.backgroundColor = 'red';
+  corner_a.style.transition = 'all 0.5s ease';
+})
