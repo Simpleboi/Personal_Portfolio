@@ -42,12 +42,25 @@ header_name.addEventListener('click', () => {
 })
 
 
-
-// Functionality for the Top Face
+// Functionality for the Top Face (White)
 const corner_a = document.getElementById('corner-a');
+const corner_b = document.getElementById('corner-b');
+const corner_d = document.getElementById('corner-d');
+const corner_c = document.getElementById('corner-c');
+const edge_a = document.getElementById('edge-a');
+const edge_d = document.getElementById('edge-d');
+const middle = document.getElementById('middle');
+const edge_b = document.getElementById('edge-b');
+const edge_c = document.getElementById('edge-c');
 
+// When the user clicks on the 'skills' tab
 const skills = document.getElementById('skills');
+
+const squares = document.querySelectorAll('#skills .square-content');
+
+// Have the Elements fade in when clicked on
 skills.addEventListener('click', () => {
-  corner_a.style.backgroundColor = 'red';
-  corner_a.style.transition = 'all 0.5s ease';
-})
+  squares.forEach(content => {
+    content.style.opacity = '1';
+  });
+});

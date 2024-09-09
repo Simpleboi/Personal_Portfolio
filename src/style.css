@@ -48,7 +48,9 @@ body {
 .square {
   width: 100%;
   height: 100%;
-  border: 1px solid #000;
+  border: 2px solid #000;
+  background-clip: padding-box;
+  position: relative;
 }
 
 .front {
@@ -113,14 +115,3 @@ nav a:hover {
 }
 
 
-#top-right:hover {
-  background-color: blue;
-  transform: scale(1.5);
-  transition: transform 1s ease;
-}
-
-#bottom-right:hover {
-  background-color: green;
-  transition: tranform 1s ease;
-  transform: scale(1.1);
-}
